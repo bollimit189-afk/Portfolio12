@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ING BOL</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { 
+            darkMode: 'class', 
+            theme: { 
+                extend: { 
+                    fontFamily: { kantumruy: ['"Kantumruy Pro"', 'sans-serif'] },
+                } 
+            } 
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; transition: background-color 0.3s ease; }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        .dark .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .input-style {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            padding: 12px 16px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .dark .input-style {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: white;
+        }
+        .input-style:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        h2, h4 { line-height: 1.6 !important; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-[#050505] dark:text-white transition-colors duration-500">
+
+    <nav class="fixed w-full z-50 top-0 px-4 py-4">
+        <div class="max-w-6xl mx-auto bg-white/70 dark:bg-black/40 backdrop-blur-xl p-3 rounded-3xl border border-black/5 dark:border-white/10 shadow-sm">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-xs font-bold">IB</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter text-blue-600 dark:text-blue-400">ING BOL</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="hover:text-blue-500 transition">ដើម</a>
+                    <a href="skills.html" class="hover:text-blue-500 transition">ជំនាញ</a>
+                    <a href="projects.html" class="hover:text-blue-500 transition">គម្រោង</a>
+                    <a href="experience.html" class="hover:text-blue-500 transition">បទពិសោធន៍</a>
+                    <a href="contact.html" class="text-blue-500 font-bold border-b-2 border-blue-500">ទំនាក់ទំនង</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDarkMode()" class="w-10 h-10 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10 hover:scale-110 transition">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                    <button onclick="toggleMenu()" class="md:hidden w-10 h-10 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-3 mt-4 p-4 border-t border-black/5 dark:border-white/10 text-center font-medium">
+                <a href="index.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ដើម</a>
+                <a href="skills.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ជំនាញ</a>
+                <a href="projects.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">គម្រោង</a>
+                <a href="experience.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">បទពិសោធន៍</a>
+                <a href="contact.html" class="py-2 text-blue-500">ទំនាក់ទំនង</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tight">ទំនាក់ទំនង</h2>
+            <p class="text-slate-500 dark:text-slate-400 italic font-medium">"រីករាយនឹងការសហការ និងពិភាក្សាលើគម្រោងថ្មីៗ"</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-1 space-y-6">
+                <a href="tel:0715720125" class="block bento-card p-8 flex items-center gap-6 group hover:border-blue-500 transition">
+                    <div class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-2xl flex items-center justify-center text-xl group-hover:scale-110 transition shrink-0">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">លេខទូរស័ព្ទ</h4>
+                        <p class="font-bold">071 572 0125</p>
+                    </div>
+                </a>
+
+                <a href="mailto:bollimit189@gmail.com" class="block bento-card p-8 flex items-center gap-6 group hover:border-emerald-500 transition">
+                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-500 rounded-2xl flex items-center justify-center text-xl group-hover:scale-110 transition shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">អ៊ីមែល</h4>
+                        <p class="font-bold text-sm">bollimit189@gmail.com</p>
+                    </div>
+                </a>
+
+                <div class="bento-card p-8 flex items-center gap-6 group hover:border-orange-500 transition">
+                    <div class="w-14 h-14 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center text-xl group-hover:scale-110 transition shrink-0">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">ទីតាំងបច្ចុប្បន្ន</h4>
+                        <p class="font-bold text-sm">ភ្នំពេញ, កម្ពុជា</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bento-card p-8 md:p-12">
+                <form action="#" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold ml-1">ឈ្មោះរបស់អ្នក</label>
+                            <input type="text" placeholder="John Doe" class="input-style" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold ml-1">អ៊ីមែល</label>
+                            <input type="email" placeholder="example@mail.com" class="input-style" required>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold ml-1">ប្រធានបទ</label>
+                        <input type="text" placeholder="សហការការងារ / សាកសួរព័ត៌មាន" class="input-style">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold ml-1">សាររបស់អ្នក</label>
+                        <textarea rows="5" placeholder="សរសេរសាររបស់អ្នកនៅទីនេះ..." class="input-style resize-none" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all shadow-lg shadow-blue-500/20 active:scale-[0.98] flex items-center justify-center gap-3">
+                        ផ្ញើសារ <i class="fas fa-paper-plane text-sm"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="mt-20 flex flex-col items-center gap-6">
+            <div class="flex gap-8 opacity-60">
+                <a href="https://bollimit189-afk.github.io/CBAbol15/" target="_blank" class="text-2xl hover:text-blue-600 transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/your_telegram_username" target="_blank" class="text-2xl hover:text-blue-400 transition"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/your_github_username" target="_blank" class="text-2xl hover:text-white transition"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-[10px] md:text-xs text-slate-500">© 2026 Designed by <span class="font-bold">ING BOL</span>. All rights reserved.</p>
+        </div>
+    </main>
+
+    <script>
+        // បើក/បិទ Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // មុខងារ Dark Mode
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.innerText = '🌙';
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                icon.innerText = '☀️';
+                localStorage.theme = 'dark';
+            }
+        }
+
+        // រក្សាទុក Dark Mode ពេល Refresh
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').innerText = '☀️';
+        }
+    </script>
+</body>
+</html>

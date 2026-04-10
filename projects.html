@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | ING BOL</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { 
+            darkMode: 'class', 
+            theme: { 
+                extend: { 
+                    fontFamily: { kantumruy: ['"Kantumruy Pro"', 'sans-serif'] },
+                } 
+            } 
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; transition: background-color 0.3s ease; }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .dark .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .bento-card:hover {
+            transform: translateY(-8px);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h2, h3, h4 { line-height: 1.6 !important; }
+        p { line-height: 1.8 !important; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-[#050505] dark:text-white transition-colors duration-500">
+
+    <nav class="fixed w-full z-50 top-0 px-4 py-4">
+        <div class="max-w-6xl mx-auto bg-white/70 dark:bg-black/40 backdrop-blur-xl p-3 rounded-3xl border border-black/5 dark:border-white/10 shadow-sm">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white text-xs font-bold">IB</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter text-blue-600 dark:text-blue-400">ING BOL</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="hover:text-blue-500 transition">ដើម</a>
+                    <a href="skills.html" class="hover:text-blue-500 transition">ជំនាញ</a>
+                    <a href="projects.html" class="text-blue-500 font-bold border-b-2 border-blue-500">គម្រោង</a>
+                    <a href="experience.html" class="hover:text-blue-500 transition">បទពិសោធន៍</a>
+                    <a href="contact.html" class="hover:text-blue-500 transition">ទំនាក់ទំនង</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDarkMode()" class="w-10 h-10 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                    <button onclick="toggleMenu()" class="md:hidden w-10 h-10 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-3 mt-4 p-4 border-t border-black/5 dark:border-white/10 text-center font-medium">
+                <a href="index.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ដើម</a>
+                <a href="skills.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ជំនាញ</a>
+                <a href="projects.html" class="py-2 text-blue-500">គម្រោង</a>
+                <a href="experience.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">បទពិសោធន៍</a>
+                <a href="contact.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ទំនាក់ទំនង</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tight">គម្រោង និងស្នាដៃ</h2>
+            <p class="text-slate-500 dark:text-slate-400">កម្រងគម្រោងដែលខ្ញុំបានបង្កើត និងចូលរួមអភិវឌ្ឍ</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="bento-card group flex flex-col">
+                <div class="relative h-60 overflow-hidden">
+                    <div class="absolute inset-0 bg-blue-900/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop" alt="Hotel System" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-hotel text-xl text-blue-500"></i>
+                            <h3 class="text-2xl font-bold">Hotel Management System</h3>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 italic">
+                            ប្រព័ន្ធគ្រប់គ្រងសណ្ឋាគារសម្រាប់ចុះឈ្មោះភ្ញៀវ គ្រប់គ្រងបន្ទប់ និងទូទាត់ប្រាក់។
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-black/5 dark:border-white/5">
+                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded-full uppercase">C++</span>
+                        <span class="px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold rounded-full uppercase">Database</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card group flex flex-col">
+                <div class="relative h-60 overflow-hidden">
+                    <div class="absolute inset-0 bg-emerald-900/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop" alt="Student System" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-graduation-cap text-xl text-emerald-500"></i>
+                            <h3 class="text-2xl font-bold">Student Score System</h3>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 italic">
+                            កម្មវិធីគណនាពិន្ទុនិស្សិត និងគ្រប់គ្រងទិន្នន័យអប់រំឱ្យមានប្រសិទ្ធភាព។
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-black/5 dark:border-white/5">
+                        <span class="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded-full uppercase">C++ / Algorithm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card group flex flex-col">
+                <div class="relative h-60 overflow-hidden">
+                    <div class="absolute inset-0 bg-orange-900/20 group-hover:bg-transparent transition duration-500 z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=600&auto=format&fit=crop" alt="Web Project" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                            <h3 class="text-2xl font-bold">Registration Form</h3>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 italic">
+                            ទម្រង់ចុះឈ្មោះតាមអនឡាញ ដែលប្រើប្រាស់ Tailwind CSS សម្រាប់ភាពស្រស់ស្អាត។
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-black/5 dark:border-white/5">
+                        <span class="px-3 py-1 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 text-[10px] font-bold rounded-full uppercase">HTML / Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card flex items-center justify-center p-10 bg-slate-50 dark:bg-white/5 border-dashed border-2">
+                <div class="text-center opacity-50">
+                    <i class="fas fa-plus-circle text-4xl mb-4 text-blue-500"></i>
+                    <h4 class="text-lg font-bold">គម្រោងបន្ទាប់...</h4>
+                    <p class="text-xs">Coming Soon</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-20 text-center">
+            <p class="text-slate-500 dark:text-slate-400 mb-6">តើអ្នកមានគំនិតចង់បង្កើតកម្មវិធីថ្មីមែនទេ?</p>
+            <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:scale-105 transition-all shadow-lg shadow-blue-500/20">
+                ពិភាក្សាការងារ <i class="fas fa-comment-dots"></i>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.innerText = '🌙';
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                icon.innerText = '☀️';
+                localStorage.theme = 'dark';
+            }
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').innerText = '☀️';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | ING BOL</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { 
+            darkMode: 'class', 
+            theme: { 
+                extend: { 
+                    fontFamily: { kantumruy: ['"Kantumruy Pro"', 'sans-serif'] },
+                } 
+            } 
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Kantumruy Pro', sans-serif; transition: background-color 0.3s ease; }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        .dark .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .bento-card:hover {
+            transform: translateY(-8px);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .dark .bento-card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        h2, h3 { line-height: 1.6 !important; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-[#050505] dark:text-white overflow-x-hidden transition-colors duration-500">
+
+    <nav class="fixed w-full z-50 top-0 px-4 py-4">
+        <div class="max-w-6xl mx-auto bg-white/70 dark:bg-black/40 backdrop-blur-xl p-3 rounded-3xl border border-black/5 dark:border-white/10 shadow-sm">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                        <span class="text-white text-xs font-bold">IB</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tighter text-blue-600 dark:text-blue-400">ING BOL</span>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="hover:text-blue-500 transition">ដើម</a>
+                    <a href="skills.html" class="text-blue-500 font-bold border-b-2 border-blue-500">ជំនាញ</a>
+                    <a href="projects.html" class="hover:text-blue-500 transition">គម្រោង</a>
+                    <a href="experience.html" class="hover:text-blue-500 transition">បទពិសោធន៍</a>
+                    <a href="contact.html" class="hover:text-blue-500 transition">ទំនាក់ទំនង</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDarkMode()" class="w-10 h-10 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                    <button onclick="toggleMenu()" class="md:hidden w-10 h-10 flex items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-3 mt-4 p-4 border-t border-black/5 dark:border-white/10 text-center font-medium">
+                <a href="index.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ដើម</a>
+                <a href="skills.html" class="py-2 text-blue-500 font-bold">ជំនាញ</a>
+                <a href="projects.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">គម្រោង</a>
+                <a href="experience.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">បទពិសោធន៍</a>
+                <a href="contact.html" class="py-2 hover:bg-blue-50 dark:hover:bg-white/5 rounded-xl">ទំនាក់ទំនង</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-32 px-6 min-h-screen">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-tight">ជំនាញបច្ចេកទេស</h2>
+                <p class="text-slate-500 dark:text-slate-400 italic font-medium">"ការអភិវឌ្ឍសមត្ថភាព ដើម្បីដោះស្រាយបញ្ហាប្រកបដោយប្រសិទ្ធភាព"</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bento-card p-10 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-code text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 uppercase tracking-tighter">C++ / C#</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">ប្រើសម្រាប់បង្កើត Logic និង Desktop Application ផ្សេងៗ។</p>
+                </div>
+
+                <div class="bento-card p-10 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-database text-3xl text-emerald-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 uppercase tracking-tighter">SQL & DBMS</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">គ្រប់គ្រង និងរៀបចំរចនាសម្ព័ន្ធទិន្នន័យ (Database) ឱ្យមានរបៀប។</p>
+                </div>
+
+                <div class="bento-card p-10 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fab fa-html5 text-3xl text-orange-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 uppercase tracking-tighter">Web Frontend</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">HTML5, Tailwind CSS និង JS សម្រាប់បង្កើត UI ដ៏ស្រស់ស្អាត។</p>
+                </div>
+
+                <div class="bento-card p-10 text-center flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-laptop-code text-3xl text-purple-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 uppercase tracking-tighter">Software Dev</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">សិក្សាពីដំណើរការនៃការអភិវឌ្ឍកម្មវិធីពេញលេញ និង Logic។</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bento-card p-8 flex flex-wrap justify-center gap-8 md:gap-16 items-center">
+                <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition cursor-default">
+                    <i class="fab fa-git-alt text-xl text-orange-600"></i> 
+                    <span class="text-xs font-bold uppercase tracking-widest">Git</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition cursor-default">
+                    <i class="fas fa-terminal text-xl text-blue-400"></i> 
+                    <span class="text-xs font-bold uppercase tracking-widest">VS Code</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition cursor-default">
+                    <i class="fab fa-windows text-xl text-blue-500"></i> 
+                    <span class="text-xs font-bold uppercase tracking-widest">Visual Studio</span>
+                </div>
+                <div class="flex items-center gap-2 opacity-60 hover:opacity-100 transition cursor-default">
+                    <i class="fas fa-server text-xl text-slate-500"></i> 
+                    <span class="text-xs font-bold uppercase tracking-widest">XAMPP</span>
+                </div>
+            </div>
+
+            <div class="mt-20 text-center">
+                <p class="text-slate-500 dark:text-slate-400 text-sm italic">© 2026 Designed by ING BOL</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.innerText = '🌙';
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                icon.innerText = '☀️';
+                localStorage.theme = 'dark';
+            }
+        }
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.getElementById('theme-icon').innerText = '☀️';
+        }
+    </script>
+</body>
+</html>
